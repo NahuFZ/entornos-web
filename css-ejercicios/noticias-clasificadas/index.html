@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <!--
-    Plan de estudios
-
-    Mostrar el plan de estudios de Ing. en Sistemas con el siguiente formato:
-    Encabezado de página con título, cuerpo con materias por año y pie con referencia a la web de la universidad.
-    Aplicar bordes, márgenes, rellenos y fondos.
+    Noticias Clasificadas
+    Hacer una página que muestre noticias resaltadas con diferentes colores según su clasificación.
 -->
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCEL | ISI | Plan de estudios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sin Filtros - Últimas noticias</title>
 </head>
 <body>
     <header>
-        <h1>Plan de estudio</h1>
-        <p><em>UCEL - Ingeniería en Sistemas de la Información</em></p>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1 class="titulo-pagina">Noticias Destacadas</h1>
     </header>
 
-    <main>
-        <table>
-            <tr>
+    <hr>
 
-            </tr>
-        </table>
+    <main>
+        <article class="noticia-destacada">
+            <h2>Noticia Destacada</h2>
+            <span class="categoria">Política</span>
+            <p>Esta es una noticia destacada que resalta por su importancia.</p>
+        </article>
+
+        <article class="noticia-importante">
+            <h2>Noticia Importante</h2>
+            <span class="categoria">Policiales</span>
+            <p>Esta noticia es importante y merece atención.</p>
+        </article>
+
+        <article class="noticia-normal">
+            <h2>Noticia Normal</h2>
+            <span class="categoria">Deportes</span>
+            <p>Esta es una noticia normal sin clasificación especial.</p>
+        </article>
     </main>
 
     <footer>
-        <p>Fuente: <a href="https://www.ucel.edu.ar/courses/ingenieria-en-sistemas-de-informacion/">Página oficial de ISI en UCEL</a></p>
+
     </footer>
 </body>

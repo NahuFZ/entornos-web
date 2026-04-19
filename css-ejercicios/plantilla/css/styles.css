@@ -1,0 +1,57 @@
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+}
+
+figure{
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+caption {
+  padding: 1em;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
+
+tr :nth-child(1),
+tr :nth-child(4),
+tr :nth-child(5),
+tr :nth-child(6) {
+  text-align: right;
+  width: 10%;
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: left;
+  width: 30%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: left;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: right;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
