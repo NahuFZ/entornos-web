@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Formularios 1 - HTML</title>
+</head>
+<body>
+
+    <h1>Formularios 1</h1>
+
+    <form action="accion.php" method="post">
+
+        <p><label>Nombre: <input type="text" name="txtNombre" value="" required maxlength="50"></label></p>
+
+        <p><label for="txtApellido">Apellido: </label><input type="text" name="txtApellido" id="txtApellido" value="" required maxlength="50"></p>
+
+        <p><label>Email: <input type="email" name="txtEmail" value="" required></label></p>
+
+        <p><label>Clave: <input type="password" name="txtPassword" value="" required></label> </p>
+
+        <p><label>Nivel educativo: <select name="selNivelEducativo" required>
+            <option value="" selected>Seleccionar...</option>
+            <option value="primario">Primario</option>
+            <option value="secundario">Secundario</option>
+            <option value="terciario">Terciario</option>
+            <option value="universitario">Universitario</option>
+            <option value="posgrado">Posgrado</option>
+        </select></label></p>
+
+        <p>Ubicación:
+            <label>Argentina <input type="radio" name="rbuUbicacion" value="argentina" required></label>
+            <label>Otra <input type="radio" name="rbuUbicacion" value="otra"></label>
+        </p>
+
+        <p><label>Mensaje: <textarea name="txtMensaje" rows="5" cols="30" maxlength="2000"></textarea></label></p>
+
+        <p><label>¿Acepta condiciones del servicio? <input type="checkbox" name="chkAceptaServicio" value="on" required></label></p>
+
+        <p><input type="submit" name="btnEnviar" value="Enviar"></p>
+
+    </form>
+
+</body>
+</html>

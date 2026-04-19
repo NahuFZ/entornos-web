@@ -1,0 +1,63 @@
+
+/* Sintaxis */
+
+
+/* ------------------------------
+   Reglas
+   ------------------------------ */
+
+h1 {color: blue;}
+
+/**
+ * - Regla: cada uno de los estilos que componen una hoja de estilos CSS.
+ *   Cada regla está compuesta de una parte de "selectores", un símbolo de "llave de apertura" ({),
+ *   otra parte denominada "declaración" y por último, un símbolo de "llave de cierre" (}).
+ * - Selector: indica el elemento o elementos HTML a los que se aplica la regla CSS.
+ * - Declaración: especifica los estilos que se aplican a los elementos. Está compuesta por una o
+ *   más propiedades CSS.
+ * - Propiedad: característica que se modifica en el elemento seleccionado, como por ejemplo su
+ *   tamaño de letra, su color de fondo, etc.
+ * - Valor: establece el nuevo valor de la característica modificada en el elemento.
+ */
+
+/* Esto es un comentario */
+
+/* ------------------------------
+   Equivalencia
+   ------------------------------ */
+
+h1 {background-color: silver; color: blue;}
+
+/* es equivalente a: */
+
+h1 {
+    background-color: silver;
+    color: blue
+}
+
+/* es equivalente a: */
+
+h1 {
+    background-color: silver
+}
+
+h1 {
+    color: blue
+}
+
+
+/* ------------------------------
+   Manejo de errores
+   ------------------------------ */
+
+img {float: left}       /* Correcto CSS 2.1 */
+img {float: left here}  /* "here" no es un valor de float */
+img {background: "red"} /* La palabras claves no llevan comillas */
+img {border-width: 3}   /* No se especifica unidad para el valor */
+
+/* el agente de usuario lo tratará como: */
+
+img {float: left}
+img {}
+img {}
+img {}

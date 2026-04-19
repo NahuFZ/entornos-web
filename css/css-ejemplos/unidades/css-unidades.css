@@ -1,0 +1,72 @@
+
+/* Unidades  */
+
+/* Una pulgada equivale a 2.54 centímetros */
+div#pulgadas {
+    background-color: blue;
+    height: 5in;
+    width: 5in;
+}
+
+div#centimetros {
+    background-color: blue;
+    height: 5cm;
+    width: 5cm;
+}
+
+div#milimetros {
+    background-color: blue;
+    height: 5mm;
+    width: 5mm;
+}
+
+/* Un punto equivale a 1/72 pulgadas*/
+div#puntos {
+    background-color: blue;
+    height: 5pt;
+    width: 5pt;
+}
+
+/* Una pica equivale a 12 puntos */
+div#picas {
+    background-color: blue;
+    height: 5pc;
+    width: 5pc;
+}
+
+div#pixeles {
+    background-color: blue;
+    height: 5px;
+    width: 5px;
+}
+
+div#eme {
+    background-color: green;
+    height: 5em;
+    width: 5em;
+}
+
+div#equis {
+    background-color: green;
+    height: 5ex;
+    width: 5ex;
+}
+
+div#contenedor {
+    background-color: red;
+    height: 400px;
+    width: 400px;
+}
+
+div#cuerpo {
+    background-color: yellow;
+    height: 30%;
+    width: 70%;
+}
+
+
+/* --- Separadores --- */
+
+hr {
+    margin: 25px 0;
+}

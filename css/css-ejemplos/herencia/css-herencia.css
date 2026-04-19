@@ -1,0 +1,16 @@
+
+/* Herencia */
+
+body {
+    color: blue;
+}
+
+div {
+    border: 1px solid black;
+    color: orange;
+}
+
+.destacado {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,65 @@
+
+/* Enlaces */
+
+
+/* ------------------------------
+   Estilos
+   ------------------------------ */
+
+.estilo {
+    color: #f00;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   Pseudo clases
+   ------------------------------ */
+
+.pseudo-clase:link  {
+    color: #f00;
+}
+
+.pseudo-clase:visited{
+    color: #0f0;
+}
+
+.pseudo-clase:hover{
+    color: #00f;
+}
+
+.pseudo-clase:active {
+    color: #770;
+}
+
+.pseudo-clase:focus {
+    color: #077;
+}
+
+/* ------------------------------
+   Combinado
+   ------------------------------ */
+
+.combinado  {
+    color: #555;
+    font-size: 1.5em;
+}
+
+.combinado:link, .combinado:visited   {
+    text-decoration: none;
+}
+
+.combinado:hover, .combinado:active {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Con imagen
+   ------------------------------ */
+
+.archivo-pdf {
+    padding: 0 0 0 25px;
+    background: #fff url(img/pdf.gif) no-repeat left center;
+}

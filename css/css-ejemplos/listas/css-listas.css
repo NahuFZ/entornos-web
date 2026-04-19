@@ -1,0 +1,53 @@
+
+/* Listas */
+
+/* ------------------------------
+   Tipo
+   ------------------------------ */
+
+.tipo1 {
+    list-style-type: none;
+}
+
+.tipo2 {
+    list-style-type: decimal-leading-zero;
+}
+
+.tipo3 {
+    list-style-type: circle;
+}
+
+
+/* ------------------------------
+   Posición
+   ------------------------------ */
+
+.posicion1 {
+    list-style-position: inside;
+}
+
+.posicion2 {
+    list-style-position: outside;
+}
+
+
+/* ------------------------------
+   Imágenes
+   ------------------------------ */
+
+.imagenes1 {
+    list-style-image: url(img/pdf.gif);
+}
+
+
+/* ------------------------------
+   Estilo
+   ------------------------------ */
+
+.estilo1 {
+    list-style: inside disc url(img/pdf.gif);
+}
+
+.estilo2 {
+    list-style: inside circle;
+}

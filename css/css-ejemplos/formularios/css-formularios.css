@@ -1,0 +1,48 @@
+
+/* Formularios */
+
+body {
+    font-family: Arial, Sans-serif;
+    font-size: 1em;
+    padding: 0 20px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.formulario {
+    border: 1px solid  #ddd;
+    border-radius: 3px;
+    background-color: #eee;
+    width: 320px;
+}
+
+.formulario p {
+    margin: 20px 12px;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input[type="text"], .formulario input[type="password"] {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 10px;
+    width: 270px;
+}
+
+.formulario input[type="submit"] {
+    border: 1px solid #888;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #4788ee;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #3677dd;
+}

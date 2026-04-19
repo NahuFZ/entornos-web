@@ -1,0 +1,97 @@
+
+/* Textos 2 */
+
+div {
+    border: 1px solid #00f;
+    margin: 20px;
+}
+
+
+/* ------------------------------
+   Alineación
+   ------------------------------ */
+
+.alineacion-izquierda {
+    border: 1px solid #00f;
+    text-align: left;
+}
+
+.alineacion-derecha {
+    border: 1px solid #00f;
+    text-align: right;
+}
+
+.alineacion-centro {
+    border: 1px solid #00f;
+    text-align: center;
+}
+
+.alineacion-justificado {
+    border: 1px solid #00f;
+    text-align: justify;
+}
+
+
+/* ------------------------------
+   Interlineado
+   ------------------------------ */
+
+.interlineado1 {
+    line-height: 10px;
+}
+
+.interlineado2 {
+    line-height: 150%;
+}
+
+
+/* ------------------------------
+   Decoración
+   ------------------------------ */
+
+.decoracion1 {
+    text-decoration: line-through;
+}
+
+.decoracion2 {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Transformación
+   ------------------------------ */
+
+.transformacion {
+    text-transform: uppercase;
+}
+
+
+/* ------------------------------
+   Alineación vertical
+   ------------------------------ */
+
+.alineacion-vertical1 {
+    vertical-align: top;
+}
+
+.alineacion-vertical2 {
+    vertical-align: middle;
+}
+
+.alineacion-vertical3 {
+    vertical-align: baseline;
+}
+
+
+/* ------------------------------
+   Espacios
+   ------------------------------ */
+
+.espacios1 {
+    letter-spacing: .5em;
+}
+
+.espacios2 {
+    word-spacing: .5em;
+}

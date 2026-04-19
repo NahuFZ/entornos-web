@@ -1,0 +1,17 @@
+
+/* Modelo de caja 1 */
+
+/* ------------------------------
+   Ejemplo
+   ------------------------------ */
+
+.contenedor {
+    border: 1px solid #000;
+}
+
+.contenedor p {
+    background-color: #ccc;
+    border: 10px solid #00f;
+    margin: 10px;
+    padding: 10px;
+}

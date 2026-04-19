@@ -1,0 +1,26 @@
+
+/* Medios Print */
+
+.menu {
+    display: none;
+}
+
+p{
+    border: 0;
+    color: #333;
+}
+
+
+/* Otra forma para combinar medios en una hoja de estilos */
+/*
+@media print {
+    .menu {
+        display: none
+    }
+
+    p{
+        border: 0;
+        color: #000
+    }
+}
+*/

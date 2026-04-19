@@ -1,0 +1,73 @@
+
+/* Cascada */
+
+
+/* ------------------------------
+   Orden
+   ------------------------------ */
+
+h1 {
+    color: red;
+}
+
+h1 {
+    color: yellow;
+}
+
+h1 {
+    color: blue;
+}
+
+
+/* ------------------------------
+   Important
+   ------------------------------ */
+
+h2 {
+    color: green !important;
+}
+
+h2 {
+    color: gray;
+}
+
+
+/* ------------------------------
+   Especificidad
+   ------------------------------ */
+
+h3#especial1 {
+    color: red;
+}
+
+h3 {
+    color: silver;
+}
+
+
+/* ------------------------------
+   Combinado
+   ------------------------------ */
+
+h4 {
+    color: olive !important;
+}
+
+h4 {
+    color: lime !important;
+}
+
+h4#especial2 {
+    color: navy;
+}
+
+h4 {
+    color: silver;
+}
+
+
+/* --- Separadores --- */
+
+hr {
+    margin: 25px 0;
+}

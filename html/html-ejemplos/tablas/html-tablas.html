@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Tablas - HTML</title>
+</head>
+<body>
+
+    <h1>Tablas</h1>
+
+    <h2>Tabla con título y encabezado</h2>
+    <table>
+        <caption>Trabajos Prácticos</caption>
+        <tr>
+            <th>Alumno</th><th>TP1</th><th>TP2</th><th>Promedio</th>
+        </tr>
+        <tr>
+            <td>Gómez, José</td><td>6</td><td>8</td><td>7</td>
+        </tr>
+        <tr>
+            <td>González, María</td><td>10</td><td>8</td><td>9</td>
+        </tr>
+        <tr>
+            <td>Pérez, Juan</td><td>7</td><td>9</td><td>8</td>
+        </tr>
+    </table>
+
+    <h2>Tabla con filas combinadas</h2>
+    <table>
+        <caption>Título de la tabla</caption>
+        <tr>
+            <th>A1</th><th>A2</th><th>A3</th><th>A4</th>
+        </tr>
+        <tr>
+            <td rowspan="2">B1+C1</td><td>B2</td><td>B3</td><td>B4</td>
+        </tr>
+        <tr>
+            <td>C2</td><td rowspan="2">C3+D3</td><td>C4</td>
+        </tr>
+        <tr>
+            <td>D1</td><td>D2</td><td>D4</td>
+        </tr>
+    </table>
+
+    <h2>Tabla con columnas combinadas</h2>
+    <table>
+        <caption>Título de la tabla</caption>
+        <tr>
+            <th colspan="4">A1+A2+A3+A4</th>
+        </tr>
+        <tr>
+            <td>B1</td><td>B2</td><td>B3</td><td>B4</td>
+        </tr>
+        <tr>
+            <td>C1</td><td>C2</td><td>C3</td><td>C4</td>
+        </tr>
+        <tr>
+            <td colspan="3">D1+D2+D3</td><td>D4</td>
+        </tr>
+    </table>
+
+    <h2>Tabla con filas y columnas combinadas</h2>
+    <table>
+        <caption>Título de la tabla</caption>
+        <tr>
+            <th>A1</th><th>A2</th><th>A3</th><th>A4</th>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="3">B1+B2+B3+C1+C2+C3</td><td>B4</td>
+        </tr>
+        <tr>
+            <td>C4</td>
+        </tr>
+        <tr>
+            <td>D1</td><td>D2</td><td>D3</td><td>D4</td>
+        </tr>
+    </table>
+
+</body>
+</html>

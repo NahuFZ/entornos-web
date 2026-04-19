@@ -1,0 +1,106 @@
+
+/* Selectores */
+
+
+/* ------------------------------
+   Selector universal
+   ------------------------------ */
+
+* {
+  margin: 0;
+}
+
+
+/* ------------------------------
+   Selector de tipo etiqueta
+   ------------------------------ */
+
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: blue;
+}
+
+p {
+  color: blue;
+}
+
+/* otra forma */
+h1, h2, p {
+  color: blue;
+}
+
+
+/* ------------------------------
+   Selector descendente
+   ------------------------------ */
+
+p span {
+    color: red;
+}
+
+
+/* ------------------------------
+   Selector de clase
+   ------------------------------ */
+
+.estilo1 {
+    color: green;
+}
+
+/* restringe estilo1 solo a p */
+p.estilo1 {
+    color: green;
+}
+
+.estilo2 {
+    background-color: yellow;
+}
+
+
+/* ------------------------------
+   Selector de id
+   ------------------------------ */
+
+#encabezado {
+    border: 1px solid blue;
+    height: 100px;
+    width: 800px;
+}
+
+
+/* ------------------------------
+   Selector de hijos
+   ------------------------------ */
+
+p > em {
+    color: maroon;
+}
+
+
+/* ------------------------------
+   Selector adyacente
+   ------------------------------ */
+
+h4 + h5 {
+    color: orange;
+}
+
+
+/* ------------------------------
+   Selector de atributos
+   ------------------------------ */
+
+input[type="text"] {
+    color: olive;
+}
+
+
+/* --- Separadores --- */
+
+hr {
+    margin: 25px 0;
+}
+

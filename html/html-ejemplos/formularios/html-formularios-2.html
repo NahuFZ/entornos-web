@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Formularios 2 - HTML</title>
+</head>
+<body>
+
+    <h1>Formularios 2</h1>
+
+    <form action="accion.php" method="post">
+
+        <p><label>Opciones: <select name="selOpciones">
+            <optgroup label="Grupo 1">
+               <option value="opcion11" selected>Opción 11</option>
+               <option value="opcion12">Opción 12</option>
+               <option value="opcion13">Opción 13</option>
+            </optgroup>
+            <optgroup label="Grupo 2">
+               <option value="opcion21">Opción 21</option>
+               <option value="opcion22">Opción 22</option>
+            </optgroup>
+            <option value="opcion3">Opción 3</option>
+        </select></label></p>
+
+        <p><label>Componentes: <select name="selComponentes[]" required multiple size="5">
+            <option value="" disabled>Seleccionar...</option>
+            <option value="componente1">Componente 1</option>
+            <option value="componente2">Componente 2</option>
+            <option value="componente3">Componente 3</option>
+            <option value="componente4">Componente 4</option>
+            <option value="componente5">Componente 5</option>
+            <option value="componente6">Componente 6</option>
+            <option value="componente7">Componente 7</option>
+            <option value="componente8">Componente 8</option>
+        </select></label></p>
+
+        <fieldset>
+            <legend>Otros datos</legend>
+            <p><label>Nombre: <input type="text" name="txtNombre" value="" placeholder="Mi nombre"></label></p>
+            <p><label>Edad: <input type="number" name="txtEdad" value=""></label></p>
+            <p><label>Teléfono: <input type="tel" name="txtTelefono" value="" maxlength="20"></label></p>
+        </fieldset>
+
+        <p><label>Solo lectura: <input type="text" name="txtSoloLectura" value="Prueba solo lectura" readonly></label></p>
+
+        <p><label>Deshabilitado: <input type="text" name="txtDeshabilitado" value="Prueba deshabilitado" disabled></label></p>
+
+        <p><input type="hidden" name="txtOculto" value="mivalor"></p>
+
+        <p><input type="button" id="txtValidar" name="txtValidar" value="Validar"></p>
+
+        <p><input type="reset" value="Reset"></p>
+
+        <p><input type="submit" name="btnEnviar" value="Enviar"></p>
+
+    </form>
+
+</body>
+</html>

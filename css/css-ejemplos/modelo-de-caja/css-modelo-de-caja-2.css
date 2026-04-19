@@ -1,0 +1,150 @@
+
+/* Modelo de caja 2 */
+
+
+/* ------------------------------
+   Ancho y Alto
+   ------------------------------ */
+
+.ancho-alto {
+    background-color: #ccc;
+    height: 100px;
+    width: 100px;
+}
+
+
+/* ------------------------------
+   Bordes
+   ------------------------------ */
+
+.bordes1 {
+    height: 100px;
+    width: 100px;
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: dashed;
+    border-left-style: double;
+}
+
+.bordes2 {
+    height: 100px;
+    width: 100px;
+    border-style: solid solid solid solid;
+}
+
+/* Otra forma */
+.bordes2 {
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+}
+
+/**
+ * Regla de asignación:
+ * - Si solo se indica un valor: todos tienen ese valor.
+ * - Si se indican dos valores: el primero se asigna al superior
+ *   e inferior, y el segundo se asigna a izquierdo y derecho.
+ * - Si se indican tres valores: el primero se asigna al superior,
+ *   el segundo se asigna a izquierdo y derecho, y el tercero se asigna al inferior.
+ * - Si se indican los cuatro valores, el orden de asignación es: superior, derecho,
+ *   inferior e izquierdo.
+ */
+
+.bordes3 {
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-top-width: 5px;
+    border-right-width: 10px;
+    border-bottom-width: 15px;
+    border-left-width: 20px;
+}
+
+.bordes4 {
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-top-color: #000;
+    border-right-color: #f00;
+    border-bottom-color: #0f0;
+    border-left-color: #00f;
+}
+
+.bordes5 {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #0f0;
+}
+
+
+/* ------------------------------
+   Márgenes
+   ------------------------------ */
+
+.margenes-contenedor{
+    border: 1px solid #000;
+    margin-top: 5px;
+}
+
+.margenes-contenido1 {
+    background-color: #ccc;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.margenes-contenido2 {
+    background-color: #ccc;
+    margin: 10px auto;
+    width: 50%;
+}
+
+
+/* ------------------------------
+   Relleno
+   ------------------------------ */
+
+.relleno-contenedor{
+    border: 1px solid #000;
+}
+
+.relleno-contenido{
+    background-color: #ccc;
+    margin: 0;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+
+/* ------------------------------
+   Fondos
+   ------------------------------ */
+
+.fondos1 {
+    background-color: #0f0;
+    height: 100px;
+    width: 100px;
+}
+
+.fondos2 {
+    background-image: url(img/fondo.png);
+    height: 64px;
+}
+
+.fondos3 {
+  background-color: #aaa;
+  background-image: url(img/fondo.png);
+  background-repeat: no-repeat;
+  background-position: 50px 30px;
+  height: 100px;
+  width: 100px;
+}
+
+.fondos4 {
+  background: #aaa url(img/fondo.png) repeat-x 0 20px;
+  height: 100px;
+  width: 100px;
+}

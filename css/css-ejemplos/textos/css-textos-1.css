@@ -1,0 +1,81 @@
+
+/* Textos 1 */
+
+
+/* ------------------------------
+   Color
+   ------------------------------ */
+
+.color {
+    color: #f00;
+}
+
+
+/* ------------------------------
+   Fuente
+   ------------------------------ */
+
+.fuente1 {
+    font-family: Arial, Tahoma, Sans-serif;
+}
+
+.fuente2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+/* ------------------------------
+   Tamaño
+   ------------------------------ */
+
+.tamano1 {
+    font-size: 20px;
+}
+
+.tamano2 {
+    font-size: 1em;
+}
+
+
+/* ------------------------------
+   Peso
+   ------------------------------ */
+
+.peso1 {
+    font-weight: bold;
+}
+
+.peso2 {
+    font-weight: normal;
+}
+
+
+/* ------------------------------
+   Estilo
+   ------------------------------ */
+
+.estilo1 {
+    font-style: italic;
+}
+
+.estilo2 {
+    font-style: normal;
+}
+
+
+/* ------------------------------
+   Variante
+   ------------------------------ */
+
+.variante {
+    font-variant: small-caps;
+}
+
+
+/* ------------------------------
+   Font
+   ------------------------------ */
+
+.font {
+    font: italic small-caps bold 2em Arial, Tahoma, Sans-serif;
+}
