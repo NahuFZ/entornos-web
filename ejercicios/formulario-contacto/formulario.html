@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 
+Formulario de contacto
+
+Hacer un formulario de contacto.
+
+Contenido:
+    • Título de la página
+    • Campos del formulario        
+    • Nombre (requerido, hasta 100 caracteres).
+    • Email (requerido).
+    • Tipo de cliente (opciones A/B/C/Otro) (requerido).
+    • Teléfono (opcional, hasta 20 caracteres).
+    • Mensaje (requerido, hasta 2000 caracteres).
+    • Opción para enviar una copia del mensaje al email ingresado. 
+-->
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario de contacto</h1>
+        <span class="obligatorio">* Obligatorio</span> 
+    </header>
+    <div class="formBox">
+        <form class="formContacto" action="success.html" method="POST">
+            <h2>Ingrese sus datos</h2>
+            <p><label>Nombre<span class="obligatorio">*</span> <input name="name" type="text" placeholder="Nombre" maxlength="100" required></label></p>
+            <p><label>Email<span class="obligatorio">*</span> <input name="email" type="email" placeholder="Email" required></label></p>
+            <p><label>Tipo de cliente<span class="obligatorio">*</span> <select name="tipoCliente" required>
+                <option value="" selected>Seleccione una opción</option>
+                <option value="a">Cliente A</option>
+                <option value="b">Cliente B</option>
+                <option value="c">Cliente C</option>
+            </select></label></p>
+            <p><label>Teléfono<span class="obligatorio">*</span> <input name="cellphone" type="tel" placeholder="Teléfono" pattern="\d{1,20}" required></label></p>
+            <p><label>Mensaje <textarea name="txtMensaje" rows="5" cols="30" maxlength="2000"></textarea></label></p>
+            <p><label>Enviar una copia a mi email <input name="formCopy" type="checkbox" value="true"></label></p>
+            <p><input type="submit" name="enviarInfo" value="Enviar"></label></p>
+        </form>
+    </div>
+</body>
+</html>
+</html>

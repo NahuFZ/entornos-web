@@ -1,0 +1,158 @@
+/* Google Style Guide: Minimalist & Clean */
+
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #5f6368;
+  --error-color: #d93025;
+  --bg-color: #f8f9fa;
+  --text-color: #202124;
+  --border-color: #dadce0;
+  --font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 32px;
+}
+
+header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin: 0 0 8px 0;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: var(--error-color);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px; /* Evita zoom automático en iOS */
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label-style {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.checkbox-container {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: normal;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1765cc;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #f1f3f4;
+}
+
+/* Responsive Web Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+Ejercicios con IA - Ejemplo 01
+
+------------------------------
+
+Rol:
+Actúa como un desarrollador web full stack.
+
+Objetivo:
+Desarrollar un formulario web para realizar un pedido. Debe ser genérico, así que el nombre ni los productos debe, hacer referencia a un tipo de negocio en específico.
+Debe permitir:
+  - Ingresar datos de la persona que realiza el pedido:
+    Nombre (campo requerido, hasta 100 caracteres),
+    Email (requerido),
+    Teléfono (requerido, hasta 20 caracteres, que compruebe que sean solo números),
+    Dirección (requerido, hasta 250 caracteres),
+    Localidad (requerido, hasta 100 caracteres).
+  - Seleccionar una sucursal discriminada por localidad:
+    campo requerido, con 3 localidades y varias sucursales para cada una.
+  - Seleccionar uno o más productos:
+    campo requerido, ofrecer 5 productos.
+  - Resetear los datos ingresados.
+Agregar estilos, realizando un diseño tipo Responsive Web Design. Aclarar si el campo es requerido.
+
+Contexto:
+- Es un ejercicio de programación web, donde se implementa sólo el frontend.
+- Utilizar solo HTML y CSS (no implementar JavaScript).
+- No se requiere enviar los datos a un servidor.
+- No se contemplan sesiones de usuario.
+
+Especificaciones a aplicar:
+- HTML válido según las especificaciones de WHATWG / W3C.
+- CSS válido según especificaciones de W3C.
+- Aplicación de pautas de accesibilidad WCAG 2.2 de W3C. Con un nivel AA.
+- Aplicación de estilos de codificación para HTML y CSS. Según guía de estilos de Google.
+- Buenas prácticas en la modularización de archivos y código. Todos los estilos en un archivo externo.
+- Buenas prácticas en la aplicación de etiquetas semánticas y estilos.
+- Buenas prácticas de usabilidad y experiencia de usuario.
+- Optimización de motores de búsqueda (SEO).
+
+Formato:
+- Crear un archivo HTML y otro CSS, con la siguiente estructura de directorios:
+  public/
+  -- css/
+  ---- styles.css
+  -- index.html
+- Descargar todo en un archivo .zip.

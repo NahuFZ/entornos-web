@@ -1,0 +1,33 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+div.formBox {
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    box-sizing: content-box;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.obligatorio {
+    color: red;
+}
+input, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.formContacto input[type="submit"]{
+    border: 1px solid #000000;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #4788ee;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+.formContacto input[type="submit"]:hover {
+    background-color: #3667b4;
+}
