@@ -40,6 +40,7 @@ echo '<hr>'; // Separador
 
 function prueba()
 {
+    // Lista de estos comandos de servidores: buscar reserved variables server
     echo $_SERVER['HTTP_HOST'], '<br>';
     echo $_SERVER['SCRIPT_NAME'], '<br>';
 }
