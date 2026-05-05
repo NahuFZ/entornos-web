@@ -1,57 +1,92 @@
 html {
   font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.4;
+  background: #f5f5f5;
+  color: #222;
 }
 
-table {
-  table-layout: fixed;
-  margin: 10px auto;
-  border-collapse: collapse;
-  border-top: 1px solid #999999;
+/* Contenedor centrado */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  background: white;
+  margin-bottom: 16px;
+  border-radius: 6px;
 }
 
-figure{
-    max-width: 100%;
-    overflow-x: scroll;
+/* Header */
+header {
+  background: #2b7cff;
+  color: #fff;
+}
+header .container {
+  background: transparent;
 }
 
-caption {
-  padding: 1em;
-  font-style: italic;
-  letter-spacing: 1px;
+/* Logo y menú (usando floats) */
+.logo {
+  float: left;
+  font-size: 1.4rem;
+  padding: 10px 0;
 }
 
-tfoot {
-  border-top: 1px solid #999999;
+.menu {
+  float: right;
+}
+.menu ul {
+  list-style: none;
+}
+.menu li {
+  float: left;
+  margin-left: 18px;
+}
+.menu a:hover { background: rgba(255,255,255,0.12); border-radius: 4px; }
+
+/* Main: left and right floats */
+.left {
+  float: left;
+  width: 65%;
+  padding: 12px;
 }
 
-th,
-td {
-  vertical-align: top;
-  padding: 0.3em;
-}
-
-tr :nth-child(1),
-tr :nth-child(4),
-tr :nth-child(5),
-tr :nth-child(6) {
-  text-align: right;
-  width: 10%;
-}
-
-tr :nth-child(2),
-tr :nth-child(3) {
-  text-align: left;
+.right {
+  float: right;
   width: 30%;
+  padding: 12px;
+  background: #fafafa;
+  border-left: 1px solid #eee;
+  border-radius: 4px;
 }
 
-tfoot tr :nth-child(1) {
-  text-align: left;
+/* Pie de página: similar subdivisión */
+footer {
+  background: #222;
+  color: #ddd;
+}
+footer .container {
+  background: transparent;
+}
+footer .left {
+  float: left;
+}
+footer .right {
+  float: right;
 }
 
-tfoot tr :nth-child(2) {
-  text-align: right;
+/* Estilos pequeños para bloques */
+section h2, aside h3 {
+  margin-bottom: 8px;
 }
+p { margin-bottom: 10px; }
 
-tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+/* Responsive: en pantallas pequeñas ya no usamos floats */
+@media (max-width: 700px) {
+  .logo, .menu, .left, .right, footer .left, footer .right {
+    float: none !important;
+    width: auto !important;
+  }
+  .menu ul { text-align: center; }
+  .menu li { float: none; display: inline-block; margin: 6px; }
+  .container { padding: 12px; }
 }
