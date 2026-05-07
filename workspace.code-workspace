@@ -2,7 +2,13 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "entornos-web-apuntes",
+			"path": "../entorno-web-apuntes/entornos-web-apuntes"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "entornos-web"
+	}
 }

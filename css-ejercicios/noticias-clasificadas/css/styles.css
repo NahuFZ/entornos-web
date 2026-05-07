@@ -3,6 +3,7 @@ body{
     background-color: #f0f0f0;
     margin: 0;
 }
+
 header{
     background-color: #333;
     color: white;
@@ -10,3 +11,20 @@ header{
     text-align: center;
 }
 
+img {
+    float: left;
+}
+
+ul{
+    width: 500px;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-content: space-between;
+}
+ul.opc-menu div{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 100px;
+}
