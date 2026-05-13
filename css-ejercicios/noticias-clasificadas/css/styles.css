@@ -1,6 +1,9 @@
-body{
+
+body {
     font-family:'Courier New', Courier, monospace;
     background-color: #f0f0f0;
+    min-width: 320px;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -9,10 +12,19 @@ header{
     color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 img {
     float: left;
+    width: 300px;
+    height: 100px;
+}
+
+div .logo{
+    margin: 1em;
+    margin-bottom: 2em;
 }
 
 ul{
@@ -21,10 +33,42 @@ ul{
     margin: auto;
     flex-direction: row;
     align-content: space-between;
+    
 }
 ul.opc-menu div{
     list-style-type: none;
     margin: 0;
     padding: 0;
     flex: 1 1 100px;
+}
+
+
+h1 .titulo-pagina{
+    
+}
+
+div.noticias{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 900px;
+}
+article {
+    margin: 40px;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(44, 44, 44);
+    align-content: space-between;
+    margin: auto;
+    text-align: center;
+}
+article .noticia-destacada{
+    order: 1;
+}
+article .noticia-importante{
+    order: 2;
+}
+article .noticia-normal{
+    order: 3;
 }

@@ -4,11 +4,15 @@
 			"path": "."
 		},
 		{
-			"name": "entornos-web-apuntes",
-			"path": "../entorno-web-apuntes/entornos-web-apuntes"
+			"path": "../entornos-web-apuntes"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "entornos-web"
+		"liveServer.settings.multiRootWorkspaceName": "entornos-web",
+		"css.styleSheets": [
+
+			"**/css/*.css"
+		],
+		"css.autoValidation": "Always",
 	}
 }
