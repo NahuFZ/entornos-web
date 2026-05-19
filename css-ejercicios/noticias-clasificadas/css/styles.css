@@ -63,7 +63,7 @@ body {
 
 .header__logo{
     margin: 5px;
-    max-width: 250px;
+    max-width: 150px;
     min-width: 70px;
     height: auto;
     flex: 0 1 auto;
@@ -90,13 +90,21 @@ body {
 .articulo {
     margin: 10px;
     padding: 10px;
-    max-width: 300px;
     min-width: 100px;
+
+    max-width: 300px;
     border-style: solid;
     border-width: 2px;
     border-color:rgb(44, 44, 44);
     background-color: white; /* Un gris ligeramente más claro que tu fondo actual */
     text-align: left;
+}
+
+.articulo img{
+    width: 100%;       /* Obliga a la foto a ocupar todo el ancho de su tarjeta */
+    height: 200px;     /* Altura fija para que queden alineadas */
+    object-fit: cover; /* Recorta la foto proporcionalmente sin estirarla */
+    height: auto;
 }
 
 .articulo__titulo{
@@ -111,12 +119,8 @@ body {
 
 .articulo--destacado{
     order: 1;
-    max-width: 50%;
-}
-.articulo--destacado img{
-    order: 1;
-    max-width: 100%;
-    height: auto;
+    flex: 2, 1, 50%;
+
 }
 
 .articulo--destacado .articulo__titulo{
@@ -125,10 +129,12 @@ body {
 }
 .articulo--importante{
     order: 2;
-    max-width: 25%;
+    flex: 1, 1, 25%;
+    
 }
 .articulo--normal{
     order: 3;
+    flex: 1, 1, 25%;
 }
 
 .articulo--normal .articulo__titulo{
@@ -147,4 +153,33 @@ body {
     font-style:italic;
     color:#474747;
     margin-left: 3em;
+}
+
+
+@media screen and (max-width: 500px){
+    .tablon{
+        flex-direction: column;
+        width: 100%;
+    }
+    .articulo {
+        margin: 10px, 5px, 10px, 5px;
+        max-width: 100%;
+    }
+
+    .articulo--destacado{
+        max-width: 100%;
+    }
+
+    .articulo--destacado img{
+        order: 1;
+        height: auto;
+    }
+
+.articulo--destacado .articulo__titulo{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.articulo--importante{
+    max-width: 100%;
+}
 }
