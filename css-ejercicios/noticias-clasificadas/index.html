@@ -11,46 +11,44 @@
     <title>Sin Filtros - Últimas noticias</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/img/logo.jpg" alt="Logo de Sin Filtros" class="logo" width="300" height="100">
-        </div>
-        <nav>
-            <ul class="opc-menu">
-                <div><li><a href="#">Inicio</a></li></div>
-                <div><li><a href="#">Noticias</a></li></div>
-                <div><li><a href="#">Contacto</a></li></div>
+    <header class="header">
+        <nav class="header__nav-bar">
+            <ul class="header__nav-list">
+                <div class="header__nav-option"><li><a class="header__nav-text" href="#">Inicio</a></li></div>
+                <div class="header__nav-option"><li><a class="header__nav-text" href="#">Noticias</a></li></div>
+                <div class="header__nav-option"><li><a class="header__nav-text" href="#">Contacto</a></li></div>
             </ul>
+            <img class="header__logo" src="assets/img/logo2.jpg" alt="Logo de Sin Filtros" class="logo" width="350" height="146">
         </nav>
-        <h1 class="titulo-pagina">Noticias Destacadas</h1>
+        <h1 class="header__title">Noticias Destacadas</h1>
     </header>
 
     <hr>
 
-    <main>
-        <div class="noticias"> 
-            
-            <article class="noticia-destacada">
-                <h2>Noticia Destacada</h2>
-                <span class="categoria">Política</span>
-                <p>Esta es una noticia destacada que resalta por su importancia.</p>
+    <main class="main">
+        <div class="tablon"> 
+            <article class="articulo articulo--destacado">
+                <img src="assets/img/politica.jpg">
+                <h2 class="articulo__titulo">Noticia Destacada</h2>
+                <p class="articulo__resumen">Esta es una noticia destacada que resalta por su importancia.</p>
+                <span class="articulo__categoria">Política</span>
             </article>
             
-            <article class="noticia-importante">
-                <h2>Noticia Importante</h2>
-                <span class="categoria">Policiales</span>
-                <p>Esta noticia es importante y merece atención.</p>
+            <article class="articulo articulo--importante">
+                <h2 class="articulo__titulo">Noticia Importante</h2>
+                <p class="articulo__resumen">Esta noticia es importante y merece atención.</p>
+                <span class="articulo__categoria">Policiales</span>
             </article>
             
-            <article class="noticia-normal">
-                <h2>Noticia Normal</h2>
-                <span class="categoria">Deportes</span>
-                <p>Esta es una noticia normal sin clasificación especial.</p>
+            <article class="articulo articulo--normal">
+                <h2 class="articulo__titulo">Noticia Normal</h2>
+                <p class="articulo__resumen">Esta es una noticia normal sin clasificación especial.</p>
+                <span class="articulo__categoria">Deportes</span>
             </article>
         </div>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <p class="footer__contacto">Aquí va la información de contacto</p>
     </footer>
 </body>
