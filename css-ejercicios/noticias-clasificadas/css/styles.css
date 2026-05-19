@@ -3,7 +3,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     background-color: #f0f0f0;
     min-width: 320px;
-    min-height: 100vh;
+    min-height: 400px;
     margin: 0;
 }
 
@@ -35,27 +35,25 @@ ul{
     align-content: space-between;
     
 }
-ul.opc-menu div{
+.opc-menu div{
     list-style-type: none;
     margin: 0;
     padding: 0;
     flex: 1 1 100px;
 }
 
-
-h1 .titulo-pagina{
+.titulo-pagina{
     
 }
 
 div.noticias{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: space-between;
     height: 900px;
 }
 article {
     margin: 40px;
-    
     border-style: solid;
     border-width: 2px;
     border-color:rgb(44, 44, 44);

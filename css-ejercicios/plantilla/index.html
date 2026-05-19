@@ -15,44 +15,42 @@
   </head>
   
   <body>
-    <header>
-      <div class="container-header">
-        <aside class="left">
-          <p>Menú a la izquierda</p>
-        </aside>
-        <nav class="menu">
-          <h1 class="logo">Mi Sitio</h1>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Página 1</a></li>
-            <li><a href="#">Página 2</a></li>
-            <li><a href="#">Página 3</a></li>
-          </ul>
-        </nav>
-        <aside class="right">
-          <p>Menú a la derecha</p>
-        </aside>
-      </div>
+    <header class="header-container">
+      <aside class="header-left">
+        <p>Menú a la izquierda</p>
+      </aside>
+      <nav class="header-nav">
+        <h1 class="header-nav__logo">Mi Sitio</h1>
+        <ul class="header-nav__nav-menu">
+          <li class="header-nav__nav-menu-item"><a href="#">Inicio</a></li>
+          <li class="header-nav__nav-menu-item"><a href="#">Página 1</a></li>
+          <li class="header-nav__nav-menu-item"><a href="#">Página 2</a></li>
+          <li class="header-nav__nav-menu-item"><a href="#">Página 3</a></li>
+        </ul>
+      </nav>
+      <aside class="header-right">
+        <p>Menú a la derecha</p>
+      </aside>
     </header>
 
-    <main>
-      <div class="container-main-1">
-        <section class="left">
+    <main class="main-container">
+      <div class="main-top">
+        <section class="main-top-left">
           <h2>Contenido principal</h2>
           <p>Este es el área principal. Aquí va el contenido más importante. Puedes añadir artículos, imágenes, etc.</p>
         </section>
-        <aside class="right">
+        <aside class="main-top-right">
           <h3>Barra lateral</h3>
           <p>Información secundaria, enlaces, anuncios o widgets.</p>
         </aside>
       </div>
 
-      <div class="container-main-2">
-        <section class="left">
+      <div class="main-bottom">
+        <section class="main-bottom-left">
           <h2>Otra sección izquierda</h2>
           <p>Más contenido de ejemplo.</p>
         </section>
-        <div class="right">
+        <div class="main-bottom-right">
           <h3>Elemento derecho</h3>
           <p>Contenido a la derecha de la segunda sección.</p>
         </div>
