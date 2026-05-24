@@ -3,7 +3,7 @@
         Hacer una página que muestre las notas por alumno de cada uno de los 3 parciales del año.
         Cargar los datos en un arreglo PHP y mostrarlos con HTML en una tabla.
 
-    Notas de parciales (con funciones)
+    Notas de parciales (con estructura de control)
         Ídem ejercicio "Notas de parciales", pero incluyendo los datos desde otro archivo PHP,
         y realizando la carga en 3 tablas con while, for, y foreach respectivamente.
     

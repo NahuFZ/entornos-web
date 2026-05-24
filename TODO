@@ -1,0 +1,43 @@
+# Ejercicios de entorno web
+
+## Para hacer
+### PHP
+- Calculadora
+  - [ ] Terminar el ejercicio
+  - [ ] Agregarle estilo
+- formularios-datos
+  - [ ] Terminar el ejercicio
+  - [ ] Agregarle estilo
+- formulario-validado
+  - [ ] Terminar el ejercicio
+    - [ ] Terminar el punto uno
+    - [ ] Terminar el punto dos (agregarle espacios de nombre)
+  - [ ] Agregarle estilo
+- notas-parciales
+  - [ ] Terminar el ejercicio
+    - [ ] Terminar el punto uno
+    - [ ] Terminar el punto dos (agregarle estructuras de control)
+    - [ ] Terminar el punto tres (agregarle funciones)
+  - [ ] Agregarle estilo
+- par-impar
+  - [ ] Terminar el ejercicio
+  - [ ] Agregarle estilo
+- plantilla reutilizable
+  - [ ] Terminar el ejercicio
+  - [ ] Agregarle estilo
+### CSS
+- noticias-clasificadas
+  - [ ] Arreglar el flexbox
+- plantilla
+  - [ ] Terminar el ejercicio
+  - [ ] Agregarle estilo
+- formulario-contacto
+  - [ ] Agregarle estilo (propio)
+- formulario-pedido
+  - [ ] Agregarle estilo (propio)
+## Completado ✓
+### PHP
+- pagina-empresa
+  - [x] Terminar el ejercicio
+  - [x] Agregarle estilo
+### CSS
