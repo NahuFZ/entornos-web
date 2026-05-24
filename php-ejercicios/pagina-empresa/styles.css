@@ -1,0 +1,103 @@
+/* Página de empresa - estilos generales */
+
+:root {
+    --fondo: #f3f6fb;
+    --blanco: #ffffff;
+    --texto: #2d3748;
+    --texto-secundario: #4a5568;
+    --acento: #3267a8;
+    --acento-claro: #d9e6f5;
+    --borde: #cbd5e0;
+    --radio: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+main.main {
+    max-width: 780px;
+    margin: 3rem auto;
+    background: var(--blanco);
+    padding: 2rem;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: 0 18px 50px rgba(45, 55, 72, 0.08);
+}
+
+.main__titulo {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 2.5vw, 2.75rem);
+    letter-spacing: -0.03em;
+    color: var(--acento);
+}
+
+.main__presentacion,
+.main__ubicacion,
+main.main p {
+    margin: 0 0 1rem;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+}
+
+.main__presentacion {
+    margin-bottom: 1.5rem;
+}
+
+.main__ubicacion {
+    margin-bottom: 2rem;
+}
+
+.contacto {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    border-top: 1px solid var(--borde);
+    padding-top: 1.5rem;
+}
+
+.contacto__title {
+    margin: 0;
+    font-weight: 700;
+    color: var(--texto);
+    font-size: 0.96rem;
+}
+
+.contacto__data {
+    margin: 0;
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.75rem;
+    background: var(--acento-claro);
+    color: var(--texto);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contacto__data + .contacto__data {
+    margin-top: 0.45rem;
+}
+
+@media (max-width: 640px) {
+    main.main {
+        margin: 1.25rem;
+        padding: 1.5rem;
+    }
+
+    .main__titulo {
+        font-size: 2rem;
+    }
+}
