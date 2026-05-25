@@ -31,7 +31,7 @@ Además, informar la cantidad de datos POST recibidos.
             <input type="hidden" name="nivel" value=""> <!-- Opcion por defecto (vacio) -->
             <p><label class="formulario__label">Nivel educativo 
                 <select class="formulario__nivel-field" name="nivel">
-                    <option class="formulario__opcion" id="" value="" selected hidden></option> 
+                    <option class="formulario__opcion" value="" disabled>Seleccione su nivel educativo</option> 
                     <option class="formulario__opcion" value="primario">Primaria completa</option>
                     <option class="formulario__opcion" value="secundario">Secundaria completa</option>
                     <option class="formulario__opcion" value="pre-graduado">Estudiante universitario</option>
@@ -69,7 +69,7 @@ Además, informar la cantidad de datos POST recibidos.
                 </select>
             </label></p>
             
-            <p><label class="formulario__label">Mensaje <input class="formulario__mensaje-field" name="mensaje" type="textarea" placeholder="Ingrese su mensaje (opcional)"></label></p>
+            <p><label class="formulario__label">Mensaje <textarea class="formulario__mensaje-field" name="mensaje" rows=4 cols=30 placeholder="Ingrese su mensaje (opcional)"></textarea></label></p>
             
             <input type="hidden" name="aceptar-condiciones" value="false">  <!-- Opcion por defecto (vacio) -->
             <p><label class="formulario__label">¿Acepta las condiciones de los servicios?
