@@ -1,0 +1,84 @@
+<!--
+
+Crear un formulario HTML que envíe información a una página PHP, donde se muestren los datos recibidos.
+Debe contener los siguientes campos: 
+-	Nombre (input text) 
+-	Email (input email) 
+-	Nivel educativo (select)
+-	Ubicación (input radio)
+-	Servicios (select múltiple)
+-	Mensaje (textarea) 
+-	¿Acepta las condiciones de los servicios? (input checkbox).
+Además, informar la cantidad de datos POST recibidos.
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de datos</title>
+</head>
+<body>
+    <main class="main">
+        <h1 class="title">Formulario de envío de datos personales</h1>
+        <form class="formulario" action="muestra_datos_ingresados.php" method="POST">
+            <p><label class="formulario__label">Nombre <input class="formulario__name-field" name="nombre" type="text" placeholder="Nombre"></label></p>
+            
+            <p><label class="formulario__label">Email <input class="formulario__email-field" name="email" type="email" placeholder="Email"></label></p>
+            
+            <input type="hidden" name="nivel" value=""> <!-- Opcion por defecto (vacio) -->
+            <p><label class="formulario__label">Nivel educativo 
+                <select class="formulario__nivel-field" name="nivel">
+                    <option class="formulario__opcion" id="" value="" selected hidden></option> 
+                    <option class="formulario__opcion" value="primario">Primaria completa</option>
+                    <option class="formulario__opcion" value="secundario">Secundaria completa</option>
+                    <option class="formulario__opcion" value="pre-graduado">Estudiante universitario</option>
+                    <option class="formulario__opcion" value="graduado">Graduado</option>
+                </select>
+            </label></p>
+            
+            <!-- UBICACIÓN -->
+            <fieldset class="fieldset">
+                <legend>Seleccione la ciudad donde reside:</legend>
+                
+                <input type="radio" id="vacio" name="ubicacion" value="" hidden checked>
+                
+                <div>
+                    <input type="radio" id="rosario" name="ubicacion" value="rosario">
+                    <label for="rosario">Rosario</label>
+                </div>
+                <div>
+                    <input type="radio" id="funes" name="ubicacion" value="funes">
+                    <label for="funes">Funes</label>
+                </div>
+                <div>
+                    <input type="radio" id="sanlorenzo" name="ubicacion" value="sanlorenzo">
+                    <label for="sanlorenzo">San Lorenzo</label>
+                </div>
+            </fieldset>
+            
+            <p><label class="formulario__label">Servicios 
+                <select class="formulario__servicios-field" name="servicios[]" multiple>
+                    <option class="formulario__opcion" value="servicio 1">Opción 1</option>
+                    <option class="formulario__opcion" value="servicio 2">Opción 2</option>
+                    <option class="formulario__opcion" value="servicio 3">Opción 3</option>
+                    <option class="formulario__opcion" value="servicio 4">Opción 4</option>
+                    <option class="formulario__opcion" value="servicio 5">Opción 5</option>
+                </select>
+            </label></p>
+            
+            <p><label class="formulario__label">Mensaje <input class="formulario__mensaje-field" name="mensaje" type="textarea" placeholder="Ingrese su mensaje (opcional)"></label></p>
+            
+            <input type="hidden" name="aceptar-condiciones" value="false">  <!-- Opcion por defecto (vacio) -->
+            <p><label class="formulario__label">¿Acepta las condiciones de los servicios?
+                <input class="formulario__name-field" name="aceptar-condiciones" type="checkbox" value="true">
+            </label></p>
+            
+            <p><input class="formulario__button-submit" type="submit" name="boton-enviar" value="enviar"></p>
+        </form>
+    </main>
+
+</body>
+</html>
