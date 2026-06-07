@@ -1,0 +1,59 @@
+<!--
+    Calculadora
+        Hacer un formulario que permita ingresar dos valores y realizar la suma, resta,
+        multiplicación o división de los mismos.  
+        Mostrar en otra página la operación realizada y el resultado obtenido.
+        Implementar una clase que gestione los datos y cálculos, incluida desde otro archivo PHP.
+        Validar números y operación ingresada.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora primitiva</title>
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__title">Calculadora primitiva</h1>
+        <form class="form" action="" method="POST">
+            <label class="form__valor-1-label">Valor 1
+                <input class="form__valor-1-field" type="number" name="value1" required>
+            </label>
+            <label class="form__valor-2-label">Valor 2
+                <input class="form__valor-2-field" type="number" name="value1" required>
+            </label>
+
+            <fieldset class="fieldset">
+                <legend>Seleccione la operación</legend>
+
+                <!-- En caso que no se ingrese nada -->
+                <input type="hidden" name="operacion" value="">
+
+                <div class="fieldset-opcion">
+                    <input class="fieldset__radio" type="radio" name="operacion" value="sumar" selected>
+                    <label>Sumar</label>
+                </div>
+
+                <div class="fieldset-opcion">
+                    <input class="fieldset__radio" type="radio" name="operacion" value="restar">
+                    <label>Restar</label>
+                </div>
+
+                <div class="fieldset-opcion">
+                    <input class="fieldset__radio" type="radio" name="operacion" value="multiplicar">
+                    <label>Multiplicar</label>
+                </div>
+
+                <div class="fieldset-opcion">
+                    <input class="fieldset__radio" type="radio" name="operacion" value="dividir">
+                    <label>Dividir</label>
+                </div>
+            </fieldset>
+
+            <input class="form__submit" type="submit" name="Calcular">
+        </form>
+    </main>
+</body>
+</html>
