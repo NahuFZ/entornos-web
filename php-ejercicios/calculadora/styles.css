@@ -1,3 +1,6 @@
 .fieldset{
     max-width: 10em;
 }
+.error {
+    color: rgb(156, 1, 1);
+}

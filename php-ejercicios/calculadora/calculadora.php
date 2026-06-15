@@ -1,16 +1,17 @@
 <?php
 class Calculadora {
-    private static $valor1;
-    private static $valor2;
+    private $valor1;
+    private $valor2;
 
-    public function __construct($val1, $val2) {
+    public function __construct(string $val1, string $val2) {
+
         // Verificamos si ambos son numéricos
         if (is_numeric($val1) && is_numeric($val2)) {
             $this->valor1 = $val1;
             $this->valor2 = $val2;
         }
         else {
-            return null;
+            throw new Exception();
         }
             
     }
