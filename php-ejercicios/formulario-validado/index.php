@@ -13,6 +13,12 @@
         Implementar espacios de nombres en el ejercicio "Formulario validado".
 
 -->
+<?php 
+    function mostrarError ($mensajeError) {
+        echo '<span class="error">ERROR: ', $mensajeError;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,7 +29,15 @@
 </head>
 <body>
     <main class="main">
-
+        <h1 class="title">Formulario de envío de datos personales</h1>
+        <form class="formulario" action="muestra_datos_ingresados.php" method="POST">
+            
+            <p><label class="formulario__label">Nombre <input class="formulario__name-field" name="nombre" type="text" placeholder="Nombre"></label></p>
+            <?php ?>
+            <p><label class="formulario__label">Dirección <input class="formulario__adress-field" name="direccion" type="adress" placeholder="calle 123"></label></p>
+            
+            <p><label class="formulario__label">Teléfono <input class="formulario__phone-field" name="telefono" type="email" placeholder="12345678"></label></p>
+        </form>
     </main>
 
 </body>
