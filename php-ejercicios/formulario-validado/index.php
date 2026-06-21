@@ -1,3 +1,9 @@
+<?php
+require 'validacion/validacion-form';
+use Validacion\ValidacionForm as vf;
+
+$DEBUG = 1?>
+
 <!--
     Formulario validado
         Enviar información desde un formulario y validar los datos a nivel de servidor.
@@ -14,9 +20,28 @@
 
 -->
 <?php 
-    function mostrarError ($mensajeError) {
-        echo '<span class="error">ERROR: ', $mensajeError;
+if($DEBUG) var_dump($_SERVER['REQUEST_METHOD']);
+
+// Verificamos que haya llegado a esta página por POST (por medio del formulario presente en esta página).
+// TODO: Verificar que el formulario haya llegado por esta página y no por otra. 
+$isPost = $_SERVER['REQUEST_METHOD'] == 'POST';
+
+$maxChar = vf::getMaxChar();
+
+if ($isPost) {
+    $camposForm = new vf($_POST);
+    // TODO: hace falta sacar $errores del if? lo digo por el scope y el uso del array $errores más abajo
+    $errores = $camposForm -> validar();
+    if (empty($errores)){
+        header('Location: exito.html', true, 200);
+        exit;
     }
+
+    // TODO: verificar que pasa si el formulario se manda vacio. Lo digo por su uso más abajo. Ver de hacer una funcion getCampos para ValidacionForm.
+    $nombre = $_POST['nombre'] ?? '';
+    $direccion = $_POST['direccion'] ?? '';
+    $telefono = $_POST['telefono'] ?? '';
+} 
 ?>
 
 <!DOCTYPE html>
@@ -25,20 +50,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title></title>
+    <title>Formulario de contacto</title>
 </head>
 <body>
     <main class="main">
-        <h1 class="title">Formulario de envío de datos personales</h1>
-        <form class="formulario" action="muestra_datos_ingresados.php" method="POST">
-            
-            <p><label class="formulario__label">Nombre <input class="formulario__name-field" name="nombre" type="text" placeholder="Nombre"></label></p>
-            <?php ?>
-            <p><label class="formulario__label">Dirección <input class="formulario__adress-field" name="direccion" type="adress" placeholder="calle 123"></label></p>
-            
-            <p><label class="formulario__label">Teléfono <input class="formulario__phone-field" name="telefono" type="email" placeholder="12345678"></label></p>
+        <h1 class="title">Formulario de contacto</h1>
+
+        <!-- TODO: probar el espacio en nombre en la redirección del formulario -->
+        <form class="formulario" action="index.php" method="POST">
+            <!-- Inicializo todas las variables primero -->
+            <input type="hidden" name="nombre" value="">
+            <input type="hidden" name="direccion" value="">
+            <input type="hidden" name="telefono" value="">
+
+            <p><label class="formulario__label">Nombre <input class="formulario__name-field" name="nombre" type="text" placeholder="Nombre" value="<?= htmlspecialchars($nombre) ?>"></label></p>
+            <?php if ($isPost && !empty($errores)) {?>
+            <p class="formulario__text --error"><?php htmlspecialchars($errores['nombre']) /*TODO: Verficar que pasa si hago lo mismo que esta linea pero usando el <?= ?>*/?></p>
+            <?php } else {?>
+            <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['nombre'])?> caracteres</p>
+            <?php }?>
+
+            <p><label class="formulario__label">Dirección <input class="formulario__adress-field" name="direccion" type="address" placeholder="calle 123" value="<?= htmlspecialchars($direccion) ?>"></label></p>
+            <?php if ($isPost && !empty($errores)) {?>
+            <p class="formulario__text --error"><?php htmlspecialchars($errores['direccion'])?></p>
+            <?php } else {?>
+            <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['direccion'])?> caracteres</p>
+            <?php }?>
+
+            <p><label class="formulario__label">Teléfono <input class="formulario__phone-field" name="telefono" type="tel" placeholder="(555) 123-4567" value="<?= htmlspecialchars($telefono) ?>"></label></p>
+            <?php if ($isPost && !empty($errores)) {?>
+            <p class="formulario__text --error"><?php htmlspecialchars($errores['telefono'])?></p>
+            <?php } else {?>
+            <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['telefono'])?> caracteres</p>
+            <?php }?>
+
+            <p><input class="formulario__boton-envio" type="submit" value="Enviar"></p>
         </form>
     </main>
-
 </body>
 </html>
