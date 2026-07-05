@@ -45,7 +45,7 @@ class ValidacionForm{
         // Controles para el teléfono:  ¿vacio? | ¿Es int? | Menor o igual al límite de caracteres
         $telefono = $campo['telefono'];
         if (empty($telefono)) $errores['telefono'] = "Se require su número de teléfono";
-        elseif (ctype_digit($telefono)) $errores['telefono'] = "Se require su número de teléfono";
+        elseif (!ctype_digit($telefono)) $errores['telefono'] = "Ingrese solo números";
         elseif (strlen($telefono) > $maxChar['telefono']) $errores['telefono'] = 'Ingrese un número menor a ' . $maxChar['telefono'] . 'caracteres';
 
         return $errores;
