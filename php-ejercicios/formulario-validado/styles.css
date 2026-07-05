@@ -1,0 +1,8 @@
+.formulario__text --info{
+    font-style: italic;
+    color: #464646;
+}
+.formulario__text --error{
+    font-weight: bold;
+    color: #ff3030;
+}

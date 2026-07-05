@@ -24,9 +24,13 @@ class ValidacionForm{
     
     public function validar()
     {
-        $errores = [];
+        $errores = [
+            'nombre' => '',
+            'direccion' => '',
+            'telefono' => ''
+        ];
         $campo = $this -> campo;
-        $maxChar = $this -> maxChar;
+        $maxChar = self::$maxChar;
         
         // Controles para el nombre: ¿vacio? | Menor o igual al límite de caracteres
         $nombre = $campo['nombre'];
@@ -42,7 +46,7 @@ class ValidacionForm{
         $telefono = $campo['telefono'];
         if (empty($telefono)) $errores['telefono'] = "Se require su número de teléfono";
         elseif (ctype_digit($telefono)) $errores['telefono'] = "Se require su número de teléfono";
-        elseif (strlen($telefono) > $maxChar['telefono']) $errores['nombre'] = 'Ingrese un número menor a ' . $maxChar['telefono'] . 'caracteres';
+        elseif (strlen($telefono) > $maxChar['telefono']) $errores['telefono'] = 'Ingrese un número menor a ' . $maxChar['telefono'] . 'caracteres';
 
         return $errores;
     }

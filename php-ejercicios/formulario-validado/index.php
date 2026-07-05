@@ -1,5 +1,5 @@
 <?php
-require 'validacion/validacion-form';
+require 'validacion/validacion-form.php';
 use Validacion\ValidacionForm as vf;
 
 $DEBUG = 1?>
@@ -20,18 +20,27 @@ $DEBUG = 1?>
 
 -->
 <?php 
-if($DEBUG) var_dump($_SERVER['REQUEST_METHOD']);
+if($DEBUG) {
+    var_dump($_SERVER['REQUEST_METHOD']);
+    var_dump($_POST);
+}
 
 // Verificamos que haya llegado a esta página por POST (por medio del formulario presente en esta página).
 // TODO: Verificar que el formulario haya llegado por esta página y no por otra. 
 $isPost = $_SERVER['REQUEST_METHOD'] == 'POST';
 
+// Inicializo todo
 $maxChar = vf::getMaxChar();
+$nombre = '';
+$direccion = '';
+$telefono = '';
+$errores = [];
 
 if ($isPost) {
     $camposForm = new vf($_POST);
     // TODO: hace falta sacar $errores del if? lo digo por el scope y el uso del array $errores más abajo
     $errores = $camposForm -> validar();
+    var_dump($errores);
     if (empty($errores)){
         header('Location: exito.html', true, 200);
         exit;
@@ -63,23 +72,26 @@ if ($isPost) {
             <input type="hidden" name="direccion" value="">
             <input type="hidden" name="telefono" value="">
 
+            <!-- Ingreso de nombre -->
             <p><label class="formulario__label">Nombre <input class="formulario__name-field" name="nombre" type="text" placeholder="Nombre" value="<?= htmlspecialchars($nombre) ?>"></label></p>
-            <?php if ($isPost && !empty($errores)) {?>
-            <p class="formulario__text --error"><?php htmlspecialchars($errores['nombre']) /*TODO: Verficar que pasa si hago lo mismo que esta linea pero usando el <?= ?>*/?></p>
+            <?php if ($isPost && !empty($errores['nombre'])) {?>
+            <p class="formulario__text --error"><?= $errores['nombre'] ?></p>
             <?php } else {?>
             <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['nombre'])?> caracteres</p>
             <?php }?>
-
+            
+            <!-- Ingreso de dirección -->
             <p><label class="formulario__label">Dirección <input class="formulario__adress-field" name="direccion" type="address" placeholder="calle 123" value="<?= htmlspecialchars($direccion) ?>"></label></p>
-            <?php if ($isPost && !empty($errores)) {?>
-            <p class="formulario__text --error"><?php htmlspecialchars($errores['direccion'])?></p>
+            <?php if ($isPost && !empty($errores['direccion'])) {?>
+            <p class="formulario__text --error"><?= $errores['direccion'] ?></p>
             <?php } else {?>
             <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['direccion'])?> caracteres</p>
             <?php }?>
-
+            
+            <!-- Ingreso del número de teléfono -->
             <p><label class="formulario__label">Teléfono <input class="formulario__phone-field" name="telefono" type="tel" placeholder="(555) 123-4567" value="<?= htmlspecialchars($telefono) ?>"></label></p>
-            <?php if ($isPost && !empty($errores)) {?>
-            <p class="formulario__text --error"><?php htmlspecialchars($errores['telefono'])?></p>
+            <?php if ($isPost && !empty($errores['direccion'])) {?>
+            <p class="formulario__text --error"><?= $errores['telefono'] ?></p>
             <?php } else {?>
             <p class="formulario__text --info">Máximo <?= htmlspecialchars($maxChar['telefono'])?> caracteres</p>
             <?php }?>
