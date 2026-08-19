@@ -1,8 +1,16 @@
 <?php
+try {
+    require '../myLibrary/utils.php';
+} catch (Exception $e) {
+    $mensaje_error = "ERROR: no se ha encontrado la librería.";
+    echo '<span class="error">', $mensaje_error, '</span>';
+    throw new Exception($mensaje_error);
+}
 require 'validacion/validacion-form.php';
 use Validacion\ValidacionForm as vf;
 
-$DEBUG = 1?>
+$DEBUG = 1
+?>
 
 <!--
     Formulario validado
@@ -19,7 +27,8 @@ $DEBUG = 1?>
         Implementar espacios de nombres en el ejercicio "Formulario validado".
 
 -->
-<?php 
+<?php
+
 if($DEBUG) {
     var_dump($_SERVER['REQUEST_METHOD']);
     echo "<hr>\n";
@@ -42,10 +51,10 @@ if ($isPost) {
     $camposForm = new vf($_POST);
     // TODO: hace falta sacar $errores del if? lo digo por el scope y el uso del array $errores más abajo
     $errores = $camposForm -> validar();
-    var_dump(empty($errores)); echo '<hr>';
+    var_dump(emptyArray($errores)); echo '<hr>';
     // Validacion
     if($DEBUG == 1) var_dump($errores); echo "<hr>\n";
-    if (empty($errores)){
+    if (emptyArray($errores)){
         echo 'No hay errores';
         header('Location: exito.html', true, 200);
         exit;

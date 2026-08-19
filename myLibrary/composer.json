@@ -1,0 +1,9 @@
+{
+    "name": "nahuel/utils",
+    "description": "funciones útiles para mis proyectos",
+    "autoload": {
+        "psr-4": {
+            "MyLibrary\\Utils\\": "src/"
+        }
+    }
+}
